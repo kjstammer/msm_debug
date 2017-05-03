@@ -1,10 +1,12 @@
 class ActorsController < ApplicationController
+  
   def index
     @actors = Actor.all
   end
 
   def show
     @actor = Actor.find(params[:id])
+    render("actors/show.html.erb")
   end
 
   def new_form
